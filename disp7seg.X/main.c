@@ -9,10 +9,6 @@
 #include <xc.h>
 #include "config.h"
 
-void inicializar (void)
-{
-    PORTD=0;
-}
 
 void main(void) 
 { 
