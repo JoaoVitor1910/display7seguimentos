@@ -8,15 +8,22 @@
 
 #include <xc.h>
 #include "config.h"
-
+#include "inicializarDisplay.h"
+#include "delay.h"
 
 void main(void) 
 { 
    
-   inicializar();
-    
-   while(1)
-   {
-      PORTD=0x06; 
-   }
+    char cont = 0;
+    inicializar();
+    while(1)
+    {
+        display7seg(cont);
+        delay(1000);
+        ++cont;
+        if(cont >= 16)
+            cont = 0;
+    }
+            
+
 }
